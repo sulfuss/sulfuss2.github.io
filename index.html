@@ -277,17 +277,14 @@
         });
       }
 
-      // Функція для плавного переходу до секції
       function scrollToSection(sectionId) {
         const section = document.querySelector(sectionId);
         section.scrollIntoView({ behavior: "smooth" });
       }
 
-      // Зміна стилю навігаційного меню при скролінгу
       window.addEventListener("scroll", function () {
         var nav = document.querySelector("nav");
         if (window.scrollY > 50) {
-          // Початок фіксації навігаційного меню після прокрутки на 50px
           nav.classList.add("fixed");
         } else {
           nav.classList.remove("fixed");
