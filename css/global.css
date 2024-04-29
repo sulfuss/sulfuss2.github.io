@@ -1,0 +1,17 @@
+body {
+  color: #fff;
+  background-color: #000;
+  font-family: "Iter V", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+}
+section {
+  min-height: 100vh;
+
+  position: relative;
+
+  &.wrapper {
+    padding-left: 3.2967032967vw;
+    padding-right: 3.2967032967vw;
+  }
+}

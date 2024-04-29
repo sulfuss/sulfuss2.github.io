@@ -4,298 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      body {
-        font-family: "Iter V", Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      nav {
-        background-color: #333;
-        color: #fff;
-        padding: 10px 0;
-        width: 100%;
-        transition: top 2.9s;
-      }
-      nav.fixed {
-        position: fixed;
-        top: 0;
-        z-index: 1000;
-      }
-      nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-      }
-      nav ul li {
-        display: inline;
-        margin-right: 20px;
-      }
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        cursor: pointer;
-      }
-      section {
-        padding: 50px;
-        text-align: center;
-        color: #333;
-        height: 100vh;
-      }
-      section h1,
-      section h2 {
-        margin-bottom: 20px;
-      }
-      section p {
-        font-size: 18px;
-        line-height: 1.6;
-        text-align: left;
-      }
-      .gallery {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        margin-bottom: 20px;
-      }
-      .photo {
-        flex: 0 0 auto;
-        width: 300px;
-        scroll-snap-align: start;
-        margin-right: 10px;
-      }
-      button {
-        background-color: #333;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #555;
-      }
 
-      .fade-in {
-        opacity: 1;
-        transition: opacity 0.5s ease-in-out;
-      }
-      .fade-in.active {
-        opacity: 1;
-      }
-
-      #welcome,
-      #works,
-      #contacts {
-        background-color: black;
-        color: white;
-      }
-
-      #about,
-      #services {
-        background-color: white;
-        color: black;
-      }
-      section#about p {
-        text-align: left;
-        color: #000;
-        opacity: 1;
-        max-width: 300px;
-      }
-      .photo img {
-        max-width: 1000px;
-        height: 600px;
-      }
-      .photo {
-        margin-right: 600px;
-      }
-      .button {
-        display: block;
-        text-align: center;
-        margin-top: 100px;
-      }
-
-      .container {
-        display: flex;
-      }
-
-      .left {
-        flex: 1;
-        padding-right: 200px;
-      }
-
-      .right {
-        flex: 2;
-      }
-
-      .right p {
-        width: 300px;
-        margin-bottom: 40px;
-      }
-
-      .left h1,
-      .left h2 {
-        margin-top: 120px;
-      }
-
-      .left {
-        text-align: left;
-      }
-
-      .left h1,
-      .left h2,
-      .left p {
-        text-align: left;
-      }
-    </style>
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li>
-          <a href="#welcome" onclick="scrollToSection('#welcome')">Welcome</a>
-        </li>
-        <li><a href="#about" onclick="scrollToSection('#about')">About</a></li>
-        <li><a href="#works" onclick="scrollToSection('#works')">Works</a></li>
-        <li>
-          <a href="#services" onclick="scrollToSection('#services')"
-            >Services</a
-          >
-        </li>
-        <li>
-          <a href="#contacts" onclick="scrollToSection('#contacts')"
-            >Contacts</a
-          >
-        </li>
-      </ul>
-    </nav>
-
-    <section id="welcome" class="active">
-      <h1>WELCOME TO MY PORTFOLIO!</h1>
+    <section class="welcome">
+      <h1 class="title">WELCOME TO MY PORTFOLIO!</h1>
+      <div class="prof">Graphic design</div>
+      <div class="name">Khrystyna Manuylyk</div>
     </section>
 
-    <section id="about">
-      <h2>ABOUT</h2>
-      <p
-        class="fade-in"
-        style="font-size: 100px; position: absolute; top: 1300px"
-      >
-        HEY!
-      </p>
-      <p class="fade-in" style="position: absolute; top: 1400px; right: 800px">
-        I am Khrystyna Manuylyk, my big passion is art and design. My aim is to
-        create a compelling visual art that conect deeply with audience.
-      </p>
+    <header class="header">
+      <a href="#top" class="logo"><img src="/img/logo.png" alt="logo" /></a>
+      <nav>
+        <ul>
+          <li>
+            <a href="#welcome" onclick="scrollToSection('#welcome')">Welcome</a>
+          </li>
+          <li>
+            <a href="#about" onclick="scrollToSection('#about')">About</a>
+          </li>
+          <li>
+            <a href="#works" onclick="scrollToSection('#works')">Works</a>
+          </li>
+          <li>
+            <a href="#services" onclick="scrollToSection('#services')"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="#contacts" onclick="scrollToSection('#contacts')"
+              >Contacts</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-      <img
-        src="img/about.png"
-        width="300"
-        height="450"
-        style="
-          border-radius: 10px;
-          position: absolute;
-          top: 1250px;
-          right: 100px;
-        "
-      />
-    </section>
+    <section></section>
 
-    <section id="works">
-      <h2>WORKS</h2>
-      <div class="gallery">
-        <div class="photo">
-          <img src="img/Energydrink%20label.png" alt="Робота 1" />
-        </div>
-        <div class="photo"><img src="img/Eror%20404.png" alt="Робота 2" /></div>
-        <div class="photo"><img src="img/paintings.png" alt="Робота 3" /></div>
-        <div class="photo"><img src="img/logofolio.png" alt="Робота 4" /></div>
-      </div>
-      <button onclick="scrollToPrev()">←</button>
-      <button onclick="scrollToNext()">→</button>
-    </section>
-
-    <section id="services">
-      <h2>SERVICES</h2>
-
-      <div class="container">
-        <div class="left">
-          <h1>1.Branding and Identity</h1>
-          <h2>2.Print Design</h2>
-          <h2>3.Digital Design</h2>
-        </div>
-        <div class="right">
-          <p>
-            Developing brand identity systems, including logos, color palettes,
-            typography, and visual elements, to establish a cohesive and
-            recognizable brand image.
-          </p>
-          <p>
-            Designing various print materials such as brochures, posters,
-            business cards, packaging, and signage to effectively convey
-            messages and promote products or services.
-          </p>
-          <p>
-            Crafting digital assets for online platforms, including website
-            layouts, social media graphics, email newsletters, and digital
-            advertisements, to engage and interact with audiences in the digital
-            realm.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacts">
-      <h2>CONTACTS</h2>
-      <a href="https://www.behance.net/manuylyk_khrystyna" class="button"
-        ><button>BEHANCE</button></a
-      >
-      <a
-        href="https://www.instagram.com/krysta.am?igsh=NGhmNHFsYjVrbnh5&utm_source=qr"
-        class="button"
-        ><button>INSTAGRAM</button></a
-      >
-      <a href="https://t.me/sulfuss" class="button"
-        ><button>TELEGRAM</button></a
-      >
-    </section>
-
-    <script>
-      // Функції для перегортування фото
-      function scrollToPrev() {
-        document.querySelector(".gallery").scrollBy({
-          left: -300,
-          behavior: "smooth",
-        });
-      }
-
-      function scrollToNext() {
-        document.querySelector(".gallery").scrollBy({
-          left: 300,
-          behavior: "smooth",
-        });
-      }
-
-      function scrollToSection(sectionId) {
-        const section = document.querySelector(sectionId);
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-
-      window.addEventListener("scroll", function () {
-        var nav = document.querySelector("nav");
-        if (window.scrollY > 50) {
-          nav.classList.add("fixed");
-        } else {
-          nav.classList.remove("fixed");
-        }
-      });
-      function scrollToElement(elementId) {
-        const element = document.getElementById(elementId);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    </script>
+    <!-- the end -->
   </body>
 </html>
